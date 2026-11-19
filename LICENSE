@@ -1,0 +1,42 @@
+Copyright (c) 2026 Priyansh Sen. All rights reserved.
+
+This repository and its source code (the "Software") are the property of the
+copyright holder. The Software is made publicly visible for viewing and
+evaluation purposes only.
+
+Without prior written permission from the copyright holder, you may NOT:
+
+  1. copy, reproduce or redistribute the Software, in whole or in part;
+  2. modify, adapt, translate or create derivative works based on it;
+  3. use the Software, or any part of it, in any personal, commercial or
+     non-commercial product, service or project;
+  4. sublicense, sell, lease or otherwise make the Software available to
+     others.
+
+Viewing the source on GitHub, and the temporary local copies that GitHub's
+standard features create (such as viewing or forking within GitHub as allowed
+by the GitHub Terms of Service), are permitted. No other rights are granted,
+whether by implication, estoppel or otherwise.
+
+To request permission, contact the copyright holder through GitHub:
+https://github.com/priyanshsen19
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR ITS USE. THE SOFTWARE IS
+NOT A MEDICAL DEVICE AND MUST NOT BE USED FOR DIAGNOSIS OR TREATMENT.
+
+-------------------------------------------------------------------------------
+Third-party data
+
+The file src/data/real/lifesnaps.json is derived from the LifeSnaps dataset:
+Yfantidou, S., et al. (2022). LifeSnaps: a 4-month multi-modal dataset
+capturing unobtrusive snapshots of our lives in the wild. Zenodo.
+https://doi.org/10.5281/zenodo.7229547
+
+That file is NOT covered by the copyright notice above. It is licensed under
+the Creative Commons Attribution 4.0 International licence (CC BY 4.0),
+https://creativecommons.org/licenses/by/4.0/ . Changes made: one participant's
+90-day window selected; unit conversions applied; demographic fields removed.
