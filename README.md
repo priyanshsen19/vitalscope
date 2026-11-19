@@ -16,6 +16,67 @@ Built with Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, Recharts
 
 > **Not a medical device.** Vitalscope describes changes; it does not diagnose. No real Apple Watch or Temple device is connected. BrainFlow Index and Entropy are labelled *Simulated Temple-compatible* everywhere.
 
+## How it works: a visual walkthrough
+
+### 1. Today, in plain words (Simple view)
+Opening the app gives one readiness score out of 100, compared with **your own** normal. Below it are three plain tiles for recovery, sleep and movement. "Worth a look" lists what has changed this week, and "Going well" shows what is steady. Here, the demo person's heart and sleep have been off for several days, so the app suggests an easier day.
+
+![Simple view: Today screen with readiness dial, recovery/sleep/movement tiles and "Worth a look"](docs/screenshots/01-simple-today.png)
+
+### 2. My Body: every measurement against your usual range
+Each card shows this week's value, your usual value, and a bar marking where you sit in your usual range. Each one gets a plain label: *Normal for you*, *A bit higher than usual* or *Much higher than usual*.
+
+![My Body: measurement cards grouped by body area, each with a usual-range bar](docs/screenshots/02-my-body.png)
+
+Tap a card to see what the measurement is, why it matters and what may help. A 30-day chart marks your usual range with dashed lines. In this example, resting heart rate has climbed above the usual band over the last two weeks.
+
+![Measurement detail: resting heart rate rising above the usual band, with plain explanations](docs/screenshots/03-my-body-detail.png)
+
+### 3. Detailed view: the full analysis
+Switching to **Detailed** shows the analytical layer. Readiness is broken down, a focus card names the drifting signals, a vitals strip shows each metric's change versus baseline, and a trend explorer plots any signal.
+
+![Detailed view: readiness breakdown, today's focus, vitals strip and trend explorer](docs/screenshots/04-detailed-today.png)
+
+### 4. Health Drift: sustained, multi-signal change
+This is the core engine. Each signal is compared with the person's first-30-day baseline using a 5-day rolling average. The shaded area marks where **several signals moved together for 3 or more days**: here resting HR up, HRV down and sleep efficiency down. One-off bad nights are ignored. Thresholds and the baseline window can be changed under *Detection settings*.
+
+![Health Drift: four metric cards with drift badges and a combined deviation chart with the sustained episode shaded](docs/screenshots/05-health-drift.png)
+
+### 5. Experiments: test a habit on yourself
+The user states a habit and a hypothesis, logs each day whether they stuck to it, and the app compares the trial period with the equal-length period before it. The findings show the change, the effect size, how consistently the habit was kept and a confidence level. They are always framed as associations, not proof of cause.
+
+![Experiments: list of habit experiments with adherence, and the findings for the morning-walk experiment](docs/screenshots/06-experiments.png)
+
+### 6. Movement and Brain-Body
+**Movement** tracks walking speed, step length, balance and stair speed against baseline. **Brain-Body** lines up heart rate, HRV, breathing and the *simulated* Temple-compatible signals over a workout, which is clearly labelled as demo-only.
+
+![Movement module](docs/screenshots/07-movement.png)
+
+![Brain-Body: three workouts and a synchronised multi-signal timeline, labelled simulated](docs/screenshots/08-brain-body.png)
+
+### 7. Proving the analysis is right
+The **How it works** page re-runs the real analysis code live. On demo data, every planted event must be found, and the travel blip must be correctly ignored: **7 / 7 pass**.
+
+![How it works: 7/7 accuracy checks table with planted events, expected and found results](docs/screenshots/09-how-it-works-checks.png)
+
+### 8. Switching to real data
+Click **Real data** in the top bar and the same app runs on 90 days of genuine Fitbit recordings from a published study. This volunteer looks well rested (readiness 83). 9 of 10 measurements are normal for them, and only VO2 Max is slightly low.
+
+![Real data: Today screen for the LifeSnaps volunteer, readiness 83](docs/screenshots/10-real-today.png)
+
+Data Sources shows exactly where every number came from: the study, the participant, how they were picked, which Fitbit column feeds each measurement, coverage per measurement, and what is *not* in the data.
+
+![Data Sources: LifeSnaps provenance, selection rule, Fitbit column mapping and coverage](docs/screenshots/11-real-data-source.png)
+
+Real data has no answer key, so different checks run on it: plausible ranges, one row per day, coverage, usable baselines and a known-physiology sense check. All **5 / 5 pass**.
+
+![Real data checks: 5/5 passed, plus what the analysis finds in the real person's data](docs/screenshots/12-real-checks.png)
+
+### 9. On a phone
+The layout adapts to a phone, with an app-style bottom tab bar and no sideways scrolling.
+
+<img src="docs/screenshots/13-mobile-today.png" alt="Phone layout: Today screen with readiness dial and bottom tab bar" width="320">
+
 ## Run
 
 ```bash
